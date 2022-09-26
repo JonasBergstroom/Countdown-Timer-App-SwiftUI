@@ -23,6 +23,11 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .overlay(RoundedRectangle(cornerRadius: 50)
                     .stroke(Color.gray, lineWidth: 10))
+                .alert("Timer is finish!", isPresented: $viewModel.showAlert) {
+                    Button("Continue", role: .cancel) {
+                        
+                    }
+                }
         }
         .onReceive(timer) { _ in
             viewModel.updateTimer()
