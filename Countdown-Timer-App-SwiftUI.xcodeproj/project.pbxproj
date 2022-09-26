@@ -55,9 +55,9 @@
 			children = (
 				2E496CCE28E20FBF003CB7B3 /* Countdown_Timer_App_SwiftUIApp.swift */,
 				2E496CD028E20FBF003CB7B3 /* ContentView.swift */,
+				2E496CDC28E2166F003CB7B3 /* ContentViewModel.swift */,
 				2E496CD228E20FC1003CB7B3 /* Assets.xcassets */,
 				2E496CD428E20FC1003CB7B3 /* Preview Content */,
-				2E496CDC28E2166F003CB7B3 /* ContentViewModel.swift */,
 			);
 			path = "Countdown-Timer-App-SwiftUI";
 			sourceTree = "<group>";

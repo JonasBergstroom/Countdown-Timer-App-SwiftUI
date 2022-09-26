@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
+    
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    private let width: Double = 250
+    
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
