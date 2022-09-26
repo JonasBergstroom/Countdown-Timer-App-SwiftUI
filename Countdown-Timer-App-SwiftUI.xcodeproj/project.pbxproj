@@ -11,6 +11,7 @@
 		2E496CD128E20FBF003CB7B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E496CD028E20FBF003CB7B3 /* ContentView.swift */; };
 		2E496CD328E20FC1003CB7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E496CD228E20FC1003CB7B3 /* Assets.xcassets */; };
 		2E496CD628E20FC1003CB7B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E496CD528E20FC1003CB7B3 /* Preview Assets.xcassets */; };
+		2E496CDD28E2166F003CB7B3 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E496CDC28E2166F003CB7B3 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2E496CD028E20FBF003CB7B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E496CD228E20FC1003CB7B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E496CD528E20FC1003CB7B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E496CDC28E2166F003CB7B3 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				2E496CD028E20FBF003CB7B3 /* ContentView.swift */,
 				2E496CD228E20FC1003CB7B3 /* Assets.xcassets */,
 				2E496CD428E20FC1003CB7B3 /* Preview Content */,
+				2E496CDC28E2166F003CB7B3 /* ContentViewModel.swift */,
 			);
 			path = "Countdown-Timer-App-SwiftUI";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				2E496CD128E20FBF003CB7B3 /* ContentView.swift in Sources */,
 				2E496CCF28E20FBF003CB7B3 /* Countdown_Timer_App_SwiftUIApp.swift in Sources */,
+				2E496CDD28E2166F003CB7B3 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
