@@ -11,12 +11,23 @@ struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private let width: Double = 250
-    
+    private let width: Double = 300
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("\(viewModel.time)")
+                .font(.system(size: 90, weight: .medium, design: .rounded))
+                .padding()
+                .frame(width: width)
+                .background(.thinMaterial)
+                .cornerRadius(20)
+                .overlay(RoundedRectangle(cornerRadius: 50)
+                    .stroke(Color.gray, lineWidth: 10))
+        }
+        .onReceive(timer) { _ in
+            viewModel.updateTimer()
+            
+        }
     }
 }
 
