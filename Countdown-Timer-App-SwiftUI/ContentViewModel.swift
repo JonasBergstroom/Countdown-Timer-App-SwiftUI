@@ -28,5 +28,26 @@ extension ContentView {
             self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
         }
         
+        func updateTimer() {
+            guard isActive else { return }
+            
+            let now = Date()
+            let diff = endDate.timeIntervalSince1970 - now.timeIntervalSince1970
+            
+            if diff <= 0 {
+                self.isActive = false
+                self.time = "0:00"
+                self.showAlert = true
+                return
+            }
+            
+            let date = Date(timeIntervalSince1970: diff)
+            let calender = Calendar.current
+            let min = calender.component(.minute, from: date)
+            let sec = calender.component(.second, from: date)
+            
+            self.minutes = Float(min)
+            self.time = String(format: "‰d:%02d", min, sec)
+        }
     }
 }
