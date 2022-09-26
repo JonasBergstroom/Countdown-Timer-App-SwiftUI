@@ -28,6 +28,11 @@ struct ContentView: View {
                         
                     }
                 }
+            Slider(value: $viewModel.minutes, in: 1...60, step: 1)
+                .padding()
+                .frame(width: width)
+                .disabled(viewModel.isActive)
+                .animation(.easeInOut, value: viewModel.minutes)
         }
         .onReceive(timer) { _ in
             viewModel.updateTimer()
