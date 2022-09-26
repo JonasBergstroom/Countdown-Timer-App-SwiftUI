@@ -49,5 +49,11 @@ extension ContentView {
             self.minutes = Float(min)
             self.time = String(format: "‰d:%02d", min, sec)
         }
+        
+        func resetTimer() {
+            self.minutes = Float(initTime)
+            self.isActive = false
+            self.time = "\(Int(minutes)):00"
+        }
     }
 }
