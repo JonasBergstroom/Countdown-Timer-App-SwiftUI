@@ -9,6 +9,7 @@ import Foundation
 
 extension ContentView {
     final class ViewModel: ObservableObject {
+        
         @Published var isActive = false
         @Published var showAlert = false
         @Published var time: String = "0:00"
@@ -47,13 +48,13 @@ extension ContentView {
             let sec = calender.component(.second, from: date)
             
             self.minutes = Float(min)
-            self.time = String(format: "‰d:%02d", min, sec)
+            self.time = String(format: "%d:%02d", min, sec)
         }
         
         func resetTimer() {
             self.minutes = Float(initTime)
             self.isActive = false
-            self.time = "\(Int(minutes)):00"
+            self.time = "0:00"
         }
     }
 }

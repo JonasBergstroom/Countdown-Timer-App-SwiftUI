@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = ViewModel()
     
+    @StateObject private var viewModel = ViewModel()
+
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let width: Double = 300
     
@@ -33,6 +34,17 @@ struct ContentView: View {
                 .frame(width: width)
                 .disabled(viewModel.isActive)
                 .animation(.easeInOut, value: viewModel.minutes)
+            
+            HStack(spacing: 50) {
+                Button("Start") {
+                    viewModel.startTimer(minutes: viewModel.minutes)
+                }
+                .disabled(viewModel.isActive)
+                
+                Button("Reset", action: viewModel.resetTimer)
+                    .tint(.red)
+            }
+            .frame(width: width)
         }
         .onReceive(timer) { _ in
             viewModel.updateTimer()
