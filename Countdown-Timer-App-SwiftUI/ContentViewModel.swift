@@ -21,5 +21,12 @@ extension ContentView {
         private var initTime = 0
         private var endDate = Date()
         
+        func startTimer(minutes: Float) {
+            self.initTime = Int(minutes)
+            self.endDate = Date()
+            self.isActive = true
+            self.endDate = Calendar.current.date(byAdding: .minute, value: Int(minutes), to: endDate)!
+        }
+        
     }
 }
