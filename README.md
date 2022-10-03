@@ -1,5 +1,5 @@
 # Countdown-Timer-App-SwiftUI
-Simpel Countdown App for iOS
+Simpel Countdown App for iOS, from 1 min to 60 min.
 
 **The timer fast-forwards in the Demo**
 
